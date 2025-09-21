@@ -1,17 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dogesh Pet Center - Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-    <h1>Contact Us</h1>
-    <p>If you have any questions or inquiries, feel free to reach out to us!</p>
-    <ul>
-        <li>Email: info@annypetcenter.com</li>
-        <li>Phone: (123) 456-7890</li>
-        <li>Address: 123 Pet Street, Animal City, AC 12345</li>
-    </ul>
+  <!-- Navbar -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/logo.jpg" alt="Dogesh Pet Center Logo" width="50" height="50" />
+        <span>Dogesh Pet Center</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="burger" id="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="contact-section">
+    <div>
+        <div class="contact-hero">
+            <video src="images/bg.mp4" autoplay muted loop playsinline type="video/mp4">
+                Browser doesn't support video tag.
+            </video>
+
+            <div class="contact-content">
+                <h1>Contact Us</h1>
+                <p>We’d love to hear from you! 🐾</p>
+            </div>
+
+              <!-- Right side -->
+        <div class="contact-form">
+            <h1>Contact 🐕‍🦺 Me 🐾</h1>
+            <p>Your one-stop shop for all your pet’s happiness!</p>
+            <form action="mailto:anuraggupta11421@gmail.com"
+              method="POST"
+              encType="text/plain">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Jockey" required />
+                <label for="email">Email</label>
+                <input type="email" placeholder="dogesh@bhai.com" required />
+                <label for="message">Message</label>
+                <textarea placeholder="Your Message" required></textarea>
+                <button href="mailto:anuraggupta1817@gmail.com" class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+        </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div>
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="Dogesh Pet Center Logo" />
+        <p>Dogesh Pet Center</p>
+      </a>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>All rights reserved &copy; 2025 Dogesh Pet Center</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -5,12 +5,10 @@
   --secondary: #ffdee9;
   --accent: #b5ead7; 
   --text: #fff;
-  --font: "Poppins", sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: var(--font);
   background: linear-gradient(to bottom, var(--secondary), #fff);
   color: #333;
   overflow-x: hidden;
@@ -170,7 +168,6 @@ body {
   color: var(--primary);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -194,4 +191,68 @@ body {
   .hero-content h1 {
     font-size: 1.8rem;
   }
+
+}
+
+/* contact styling */
+.contact-hero {
+  
+  position: relative;
+  height: 110vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 60px;
+}
+
+.contact-hero video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.contact-hero h1,.contact-hero p {
+    
+  color: white;
+  z-index: 1;
+}
+
+.contact-form {
+  position: relative;
+  z-index: 1;
+  color: var(--dark-bg);
+  background: rgba(255, 255, 255, 0.6); 
+  padding: 20px 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px); 
+  min-height: 55%;
+  gap: 10%;
+  max-width: 30%;
+  margin-bottom: 30px;
+}
+.contact-content {
+  position: relative;
+  z-index: 1;
+  border-radius: 15px;
+  margin: 7px;
+  font-size: 1.7rem;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-form h1, .contact-form p {
+    color: var(--dark-bg);
+}
+.contact-form label {
+  font-weight: bold;
+  text-align: left;
+}
+.contact-form p{
+    font-size: large;
 }
