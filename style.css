@@ -5,11 +5,13 @@
   --secondary: #ffdee9;
   --accent: #b5ead7; 
   --text: #fff;
+  --background: #2A7B9B;
+--backgroundGradient: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
 body {
   margin: 0;
-  background: linear-gradient(to bottom, var(--secondary), #fff);
+  background: var(--backgroundGradient);
   color: #333;
   overflow-x: hidden;
 }
@@ -61,21 +63,6 @@ body {
 .navbar a:hover {
   color: var(--primary);
   transform: scale(1.1);
-}
-
-/* Burger menu */
-.burger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background: var(--text);
-  margin: 4px 0;
-  transition: all 0.3s;
 }
 
 /* Hero Section */
@@ -169,29 +156,31 @@ body {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: var(--dark-bg);
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    border-radius: 10px;
-    padding: 10px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .burger {
-    display: flex;
-  }
 
   .hero-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+  }
+  .navbar span, .navbar a {
+    font-size: 12px;
   }
 
+}
+@media (max-width: 404px) {
+    .navbar span, .navbar a {
+    font-size: 10px;
+  }
+  .navbar img {
+    width: 30px;
+    height: 30px;
+  }
+  .service-text h3,.service-text p{
+    font-size: 0.7rem;
+  }
+  .services-grid, .service-card, .container {
+    flex-direction: row;
+    gap: 10px;
+    max-width: 100%;
+}
 }
 
 /* contact styling */
@@ -216,7 +205,6 @@ body {
   z-index: -1;
 }
 .contact-hero h1,.contact-hero p {
-    
   color: white;
   z-index: 1;
 }
@@ -240,6 +228,7 @@ body {
   border-radius: 15px;
   margin: 7px;
   font-size: 1.7rem;
+  content: hidden;
 }
 .contact-form form {
   display: flex;
@@ -255,4 +244,59 @@ body {
 }
 .contact-form p{
     font-size: large;
+}
+
+
+/* Services Grid */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center ;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.service-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.service-content img {
+  max-width: 40%;
+  border-radius: 20%;
+}
+
+.service-text {
+  text-align: left;
+  flex: 1;
+}
+
+.service-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.service-text p {
+  color: gray;
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
